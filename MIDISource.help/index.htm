@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="app.css">
+	<title>MIDISource Help</title>
+	<AppleTitle>com.gneuron.MIDISource.help</AppleTitle>
+	<meta name="robots" content="anchors" />
+</head>
+<body>
+
+<h1>MIDISource Help</h1>
+<p>
+<<APPNAME>> functions in these fundamental ways:
+<ul>
+	<li>Software MIDI keyboard - Latched and Unlatched modes</li>
+	<li>Arpeggiator</li>
+	<li>Metronome</li>
+</ul>
+</p>
+
+<p>
+The metronome is independent of the keyboard and arpeggiator so you can use it by itself or in combination with the other functions.
+</p>
+
+<div class=section>General Options</div>
+<div class=subsection>Mode</div>
+<p>
+The mode sets the way in which the soft keyboard will be used.
+<ul>
+	<li>Real Time</li>
+	<div>MIDI On/Off events are sent when the soft keyboard keys are clicked and released. 'Glissando' also supported.
+	</div>
+	</li>
+	<li>Latched Real Time</li>
+	<div>
+	Same as Real Time, but each key is "click-on', 'click-off'.
+	</div>
+	<li>Arpeggiated</li>
+	Each note, or group of notes, are played sequentially, at the 'Tempo' set in TIme Options, with the Note Value selection in the Arpeggiation Options tab.
+</ul>
+</p>
+
+<div class=subsection>Max Velocity</div>
+<p>
+MIDI Note On Velocity (aka 'how hard you hit the key') ranges from 0 to 127. This slider sets the maximum velocity that will be transmitted. It is similar to a volume control, but many synthesizers/patches use the velocity control for other things in addition to volume, like filter cutoff frequency.
+</p>
+
+<div class=subsection>Output Channel</div>
+<p>
+MIDI has 16 channels. Some synths ignore the channel; some can be configured to ignore the channel. DAWs sometimes provide no way to filter on MIDI channel.
+</p>
+
+<div class=section>Time Options</div>
+
+<div class=subsection>Tempo</div>
+<p>
+The Tempo is in beats-per-minute. In 6/8 time one beat equals 3 eighth notes. <span class =parenthetical>I know, it's a bit odd, but in order to keep the UI simple I chose to do it this way.</span>
+</p>
+
+<div class=subsection>Beats Per Measure</div>
+<p>
+In x/4 this is the number of quarter notes in the measure. In x/8 this is the number of eighth notes per measure.
+</p>
+<div class=subsection>Denominator</div>
+<p>
+Here you select between a quarter note getting 1 beat, x/4, or an  eighth note getting 1 beat, x/8. The metronome is set to click every three beats in x/8 time. As a consequence, the Tempo is calculated in dotted quarters per beat, since in most cases x/8 time signatures have a triplet feel.
+</p>
+
+<div class=section>Arpeggiation Options</div>
+<p>
+The Arpeggiation Options Tab supplies the Arpeggiation-specific controls. Other sections also affect arpeggiation as well, such as the Tempo in the Time Options Tab.
+</p>
+<div class=subsection>Note Value</div>
+<p>
+You can choose among Sixteenth, Eighth, Quarter, and Whole notes. Note that a Whole note extends for an entire measure; it is not necessarily 4 beats.
+</p>
+
+<div class=subsection>Type</div>
+There are several supported Arpeggiation Types. Some are standard; some are unique to this app:
+<ul>
+	<li><div class="subsubsection">
+		Up/Down
+	</div>
+	<div class=norm>
+		The selected keys are played from bottom to top, and then back down, and then the cycle repeats from the bottom again.
+	</div>
+	</li>
+	<li><div class="subsubsection">
+		Up
+	<div class=norm>
+		The selected keys are played from bottom to top, and then the cycle repeats from the bottom again.
+	</div>
+	</div></li>
+	<li><div class="subsubsection">
+		Down
+	<div class=norm>
+		The selected keys are played from top to bottom, and then the cycle repeats from the top again.
+	</div>
+	</div></li>
+	<li><div class="subsubsection">
+		Random
+	<div class=norm>
+		Which of the selected keys are played is chosen randomly.
+	</div>
+	</div></li>
+	<li><div class="subsubsection">
+		Random Walk
+	<div class=norm>
+		The next note will either be the next one in the same direction (up or down), or will change direction (less likely), or will repeat the note (least likely).
+	</div>
+	</div></li>
+	<li><div class="subsubsection">
+		Oopmah
+	<div class=norm>
+		The bottom note will be played on the downbeat. The other notes will be played if the Note Value selection is other than Whole (note).
+	</div>
+	</div></li>
+	<li><div class="subsubsection">
+		Oompah2
+	<div class=norm>
+		The bottom note will be played on the downbeat. If the Note Value selection allows for it the second lowest note will played on beats other than the downbeat, and the rest of the notes will be played on offbeats.
+	</div>
+	</div></li>
+</ul>
+
+<div class=subsection>Legato</div>
+<p>
+This slider chooses how long each note will last.
+</p>
+<div class=subsection>Downbeat Velocity</div>
+<p>
+This chooses the relative level of downbeat notes. It is in serial with the Max Velocity so will not override that value.
+</p>
+
+<div class=subsection>Beat Velocity</div>
+<p>
+This chooses the relative level of downbeat notes.
+</p>
+<div class=subsection>Offbeat Velocity</div>
+<p>
+This chooses the relative level of offbeat notes.
+</p>
+
+<div class=section>Metronome Options</div>
+<p>
+The metronome lives in its own universe. You can enable/disable it independently of other functions.
+</p>
+<div class=subsection>Enabled</div>
+<p>
+And here's how you do that.
+</p>
+<div class=subsection>Downbeat Volume</div>
+<p>
+You can control whether the downbeat volume is louder than the beat volume.
+</p>
+<div class=subsection>Beat Volume</div>
+<p>
+In some cases you might want to set the Beat Volume to 0, so only the downbeat gets a metronome.
+</p>
+<div class=subsection>Sound</div>
+<p>
+You can choose a sound. This may inflict less psychological damage from hearing the same sound over and over again. I'm not sure.
+</p>
+</body>
+</html>

@@ -1,0 +1,57 @@
+body {
+	font-family: Arial, Verdana, sans-serif;
+}
+
+h1 {
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 24px; color: #3300FF
+}
+
+li {
+	font-weight: bold;
+}
+
+p { padding-bottom: 5px; }
+
+div.section
+{
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 20px;
+	color: #6666CC;
+	padding-bottom: 5px;
+}
+
+div.subsection
+{
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 16px;
+	color: #3333CC;
+	padding-left: 10px;
+}
+
+div.subsubsection {
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 14px; color: #3333CC
+}
+
+div.detail {
+	font-family: Arial, Verdana, sans-serif;
+}
+
+div.parenthetical {
+	font-style: italic;
+}
+
+
+div.norm {
+	font-size: medium;
+	font-family: Arial, Verdana, sans-serif;
+	font-weight: normal;
+	color: black;
+}
+
+span.parenthetical {
+	font-style: italic;
+}
+
+
